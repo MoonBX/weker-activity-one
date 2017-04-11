@@ -1,0 +1,111 @@
+<style>
+  .swiper-container {
+    width: 100%;
+  }
+
+  .swiper-container img {
+    display: block;
+    width: 100%;
+  }
+  .shop-info{
+    padding: 18px 12px;
+  }
+  .shop-info .row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+    margin-bottom: 10px;
+  }
+  .shop-info .row .title{
+    font-size: 1rem;
+  }
+  .shop-info .row .price{
+    font-size: 0.7rem;
+    color: #909090;
+  }
+  .shop-info .row .price span{
+    margin-left: 5px;
+    color: #D8D8D8;
+    font-size: 1.2rem;
+    font-weight:200;
+    text-decoration:line-through;
+  }
+  .shop-info .row .items{
+    font-size: 0.7rem;
+    color: #909090;
+  }
+  .shop-info .row .items span{
+    margin-left: 5px;
+    color: #303030;
+    font-size: 0.8rem;
+  }
+
+  .shop-info .row .items span.money2{
+    color: #5D9BFD;
+    font-size: 1rem;
+  }
+
+  .shop-info .row .items span input{
+    width: 50px;
+    border:none;
+    background-color: #EAEFFA;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 0.7rem;
+  }
+
+  .shop-info .row:nth-child(3){
+    margin-bottom: 2px;
+  }
+
+  .shop-info .tip{
+    padding-left:48px;
+    margin-bottom: 18px;
+    font-size: 0.7rem;
+  }
+
+  .tip span{
+    color: #5D9BFD;
+  }
+</style>
+<div class="swiper-container">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide"><img src="images/swiper-1.jpg" /></div>
+    <div class="swiper-slide"><img src="images/swiper-2.jpg" /></div>
+    <div class="swiper-slide"><img src="images/swiper-3.jpg" /></div>
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+</div>
+<div class="shop-info">
+  <div class="row">
+    <div class="title">我是智能锁啊啊</div>
+    <div class="price">原价 <span>¥1800</span></div>
+  </div>
+  <div class="row">
+    <div class="items">合约期 <span>12个月</span></div>
+    <div class="items">利息 <span>无</span></div>
+  </div>
+  <div class="row">
+    <div class="items">首月付 <span class="money2">¥1</span></div>
+    <div class="items">数量 <span><input type="text"></span></div>
+  </div>
+  <div class="tip">
+    <div class="items">次月<span>149</span>元，剩余11期／月供<span>150</span>元</div>
+  </div>
+  <div class="xieyi">
+    一元购机协议
+  </div>
+</div>
+<div class="bottom">
+  <a href="#shop/order" class="weui-btn weui-btn_blue">下一步</a>
+</div>
+<script>
+  $(".swiper-container").swiper({
+    loop: true,
+    autoplay: 3000
+  });
+</script>

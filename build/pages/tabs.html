@@ -1,0 +1,113 @@
+<style>
+  .appointment{
+    height: 100%;
+    background: #eee;
+    padding-top: 10px;
+  }
+  .appointment .title{
+    color: #909090;
+    font-size: 0.9rem;
+    font-weight: 200;
+    margin-left: 10px;
+  }
+  .appointment .weui-cells{
+    margin: 0;
+  }
+  .appointment .weui-label{
+    font-size: 0.8rem;
+  }
+  .appointment .weui-input{
+    text-align: right;
+    font-size: 0.8rem;
+  }
+</style>
+<div class="weui-tab">
+  <div class="weui-tab__bd">
+    <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
+      <!--<div style="background-image: url('images/home.png');background-size: 100%; min-height: 100%; overflow: scroll;background-attachment: fixed">-->
+      <!--</div>-->
+      <h1>智能锁 1元购</h1>
+      <h3>分期付款 提前享乐</h3>
+      <a href="#shop" class="weui-btn weui-btn_primary">按钮</a>
+    </div>
+    <div id="tab2" class="weui-tab__bd-item">
+      <div class="appointment" style="background: #eee; height: 100%;">
+        <div class="weui-cells weui-cells_form">
+          <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">预约人</label></div>
+            <div class="weui-cell__bd">
+              <input class="weui-input" type="number" placeholder="姓名">
+            </div>
+          </div>
+          <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">手机号码</label></div>
+            <div class="weui-cell__bd">
+              <input class="weui-input" type="number" placeholder="收货人号码">
+            </div>
+          </div>
+          <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">安装地址</label></div>
+            <div class="weui-cell__bd">
+              <input class="weui-input" type="number" placeholder="省/市/区">
+            </div>
+          </div>
+          <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">详细地址</label></div>
+            <div class="weui-cell__bd">
+              <input class="weui-input" type="number" placeholder="街道/门牌号">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="tab3" class="weui-tab__bd-item">
+      <h1>页面三</h1>
+    </div>
+    <div id="tab4" class="weui-tab__bd-item">
+
+    </div>
+    <div class="weui-navbar" >
+      <a class="weui-navbar__item weui-bar__item--on" href="#tab9">
+        选项一
+      </a>
+      <a class="weui-navbar__item" href="#tab8">
+        选项二
+      </a>
+    </div>
+    <div class="weui-tab__bd">
+      <div id="tab9" class="weui-tab__bd-item weui-tab__bd-item--active">
+        <h1>页面一</h1>
+      </div>
+      <div id="tab8" class="weui-tab__bd-item">
+        <h1>页面二</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="weui-tabbar">
+    <a href="#tab1" class="weui-tabbar__item weui-bar__item--on">
+      <div class="weui-tabbar__icon">
+        <img src="images/icon_nav_button.png" alt="">
+      </div>
+      <p class="weui-tabbar__label">首页</p>
+    </a>
+    <a href="#tab2" class="weui-tabbar__item">
+      <div class="weui-tabbar__icon">
+        <img src="images/icon_nav_msg.png" alt="">
+      </div>
+      <p class="weui-tabbar__label">立即预约</p>
+    </a>
+    <a href="#tab3" class="weui-tabbar__item">
+      <div class="weui-tabbar__icon">
+        <img src="images/icon_nav_article.png" alt="">
+      </div>
+      <p class="weui-tabbar__label">我要享分期</p>
+    </a>
+    <a href="#tab4" class="weui-tabbar__item">
+      <div class="weui-tabbar__icon">
+        <img src="images/icon_nav_cell.png" alt="">
+      </div>
+      <p class="weui-tabbar__label">订单</p>
+    </a>
+  </div>
+</div>

@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title>一元分期购</title>
+  <!-- Path to Framework7 Library CSS-->
+  <!--<link rel="stylesheet" href="css/light7.css">-->
+  <link rel="stylesheet" href="css/framework7.ios.min.css">
+  <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+  <!-- Path to your custom app styles-->
+  <link rel="stylesheet" type="text/css" href="css/validate.css">
+  <link rel="stylesheet" href="lib/toast/toast.css">
+  <link rel="stylesheet" href="css/my-app.css">
+  <!-- Path to Framework7 Library JS-->
+
+  <script src="lib/jquery/jquery-2.1.4.js"></script>
+  <script src="js/light7.js"></script>
+  <script type="text/javascript" src="js/framework7.min.js"></script>
+  <script src="js/light7-city-picker.js"></script>
+  <script src="js/jquery-mvalidate.js"></script>
+  <script type="text/javascript" src="lib/swiper/swiper.js"></script>
+  <script src="lib/toast/toast.js"></script>
+</head>
+<body>
+<!-- Views-->
+<div class="views">
+  <div class="view view-main" data-page="tabbar">
+    <div class="navbar">
+      <div class="navbar-inner navbar-on-center" data-page="home">
+        <div class="center sliding" style="left: -7px; transform: translate3d(0px, 0px, 0px);">
+          首页
+        </div>
+        <div class="right">
+          <a href="#login" class="link icon-only open-panel"> 登录</a>
+        </div>
+      </div>
+
+      <div class="navbar-inner cached" data-page="shop">
+        <div class="left">
+          <a href="javascript:;" class="back link">
+            <i class="icon icon-back"></i>
+            <span>返回</span>
+          </a>
+        </div>
+        <div class="center sliding">商品页</div>
+      </div>
+
+      <div class="navbar-inner cached" data-page="order">
+        <div class="left">
+          <a href="javascript:;" class="back link">
+            <i class="icon icon-back"></i>
+            <span>返回</span>
+          </a>
+        </div>
+        <div class="center sliding">订单</div>
+      </div>
+
+      <div class="navbar-inner cached" data-page="payment">
+        <div class="left">
+          <a href="javascript:;" class="back link">
+            <i class="icon icon-back"></i>
+            <span>返回</span>
+          </a>
+        </div>
+        <div class="center sliding">草根投资</div>
+      </div>
+
+      <div class="navbar-inner cached" data-page="appoint">
+        <div class="left">
+          <a href="javascript:;" class="back link">
+            <i class="icon icon-back"></i>
+            <span>返回</span>
+          </a>
+        </div>
+        <div class="center sliding">预约</div>
+      </div>
+
+      <div class="navbar-inner cached" data-page="login">
+        <div class="left">
+          <a href="javascript:;" class="back link">
+            <i class="icon icon-back"></i>
+            <span>返回</span>
+          </a>
+        </div>
+        <div class="center sliding">登录</div>
+      </div>
+
+      <div class="navbar-inner cached" data-page="forgot">
+        <div class="left">
+          <a href="javascript:;" class="back link">
+            <i class="icon icon-back"></i>
+            <span>返回</span>
+          </a>
+        </div>
+        <div class="center sliding">忘记密码</div>
+      </div>
+
+      <div class="navbar-inner cached" data-page="reg">
+        <div class="left">
+          <a href="javascript:;" class="back link">
+            <i class="icon icon-back"></i>
+            <span>返回</span>
+          </a>
+        </div>
+        <div class="center sliding">注册</div>
+      </div>
+    </div>
+    <div class="pages navbar-fixed toolbar-fixed">
+      <div data-page="home" class="page toolbar-fixed page-on-center">
+        <div class="page-content">
+          <div class="content-block" style="padding: 0;">
+            <a href="#appoint" class="banner img-1" style="display: block;">
+              <img src="img/home/01.jpg" alt="..." style="width: 100%;">
+            </a>
+            <a href="#" class="banner img-2" style="display: block;">
+              <img src="img/home/02.jpg" alt="..." style="width: 100%;">
+            </a>
+            <div class="banner">
+              <img src="img/home/03.jpg" alt="..." style="width: 100%;">
+            </div>
+            <div class="banner">
+              <img src="img/home/04.jpg" alt="..." style="width: 100%;">
+            </div>
+            <div class="banner">
+              <img src="img/home/05.jpg" alt="..." style="width: 100%;">
+            </div>
+            <div class="banner">
+              <img src="img/home/06.jpg" alt="..." style="width: 100%;">
+            </div>
+            <div class="banner">
+              <img src="img/home/07.jpg" alt="..." style="width: 100%;">
+            </div>
+            <div class="banner">
+              <img src="img/home/08.jpg" alt="..." style="width: 100%;">
+            </div>
+            <div class="banner">
+              <img src="img/home/09.jpg" alt="..." style="width: 100%;">
+            </div>
+            <div class="banner">
+              <img src="img/home/10.jpg" alt="..." style="width: 100%;">
+            </div>
+            <div class="banner">
+              <img src="img/home/11.jpg" alt="..." style="width: 100%;">
+            </div>
+            <div class="banner">
+              <img src="img/home/12.jpg" alt="..." style="width: 100%;">
+            </div>
+
+
+          </div>
+        </div>
+        <div class="toolbar">
+          <div class="toolbar-inner">
+            <a href="#shop">商品详情</a>
+            <a href="stage.html">我的订单</a>
+          </div>
+        </div>
+      </div>
+
+      <div data-page="shop" class="page cached">
+        <div class="page-content">
+          <div data-page="shop" class="page">
+            <!-- Scrollable page content-->
+            <div class="page-content" style="background: #fff;">
+              <div class="content-block zd-shop-cBlock" style="height: 100%;">
+                <div class="content-block-inner" style="height: 100%">
+                  <div class="swiper-container">
+                    <!-- Slides wrapper -->
+                    <div class="swiper-wrapper">
+                      <!-- Slides -->
+                      <div class="swiper-slide"><img src="img/swiper-1.png" /></div>
+                      <div class="swiper-slide"><img src="img/swiper-2.png" /></div>
+                    </div>
+                    <!-- Pagination, if required -->
+                    <div class="swiper-pagination"></div>
+                  </div>
+                  <div class="shop-info">
+                    <div class="row">
+                      <div class="shop-title">Weker智能锁 </div>
+                      <div class="price">原价 <span>¥1800</span></div>
+                    </div>
+                    <div class="row">
+                      <div class="items">合约期 <span>13个月</span></div>
+                      <div class="items">利息 <span>无</span></div>
+                    </div>
+                    <div class="row">
+                      <div class="items">首月付 <span class="money2">¥1</span></div>
+                      <div class="items">数量
+                <span>
+                  <input type="tel" class="amount-input" value="1">
+                </span>
+                      </div>
+                    </div>
+                    <div class="tip">
+                      <div class="items">次月<span>149</span>元，剩余11期／月供<span>150</span>元</div>
+                    </div>
+                    <div class="xieyi">
+                      <label class="label-checkbox item-content">
+                        <!-- Checked by default -->
+                        <input type="checkbox" name="my-checkbox" value="Books" class="xieyi-checkbox">
+                        <div class="item-media" style="float: left; margin-right: 5px;">
+                          <i class="icon icon-form-checkbox"></i>
+                        </div>
+                      </label>
+                      <div class="item-inner">
+                        <div class="item-title protocol" style="color: #5D9BFD;">
+                          <a href="#" data-popup=".popup-protocal" class="open-popup">我已阅读《一元购机协议》</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="toolbar">
+              <div class="toolbar-inner" style="padding: 0;">
+                <a href="javascript:;" class="button zd-b-button skip-to-order" style="width: 100%">下一步</a>
+              </div>
+            </div>
+            <div class="popup popup-protocal">
+              <div class="content-block">
+                <h3>指点科技服务协议标准条款</h3>
+                <p>甲方：杭州指点科技有限公司</p>
+                <p>乙方：浙江草根网络科技有限公司</p>
+                <p>丙方：【 系统填充 】  </p>
+                <p>身份证号码：【 系统填充 】 </p>
+                <p>手机号码：【 系统填充 】 </p>
+                <p>甲方（以下简称“指点科技”）是指点科技平台（包括但不限于域名为www.zhidiankeji.cn的网站、相关APP、企业微信公众号等）的运营公司，为其客户提供先进的智能家居解决方案。乙方（以下简称“草根投资”）拥有草根投资平台（包括但不限于域名为www.cgtz.com的网站及其手机客户端等）的所有权和运营权，为其平台用户提供综合性金融信息服务。丙方（以下简称“用户”）是购买本协议项下指点科技提供的商品/服务，并在草根投资平台注册以开立资金结算账户的完全民事行为能力人。本协议是指点科技与用户之间就用户购买或使用指点科技所销售的商品或所提供的服务、用户授权指点科技委托草根投资进行分期划扣所订立的协议的标准条款。</p>
+                <p>本标准条款与《指点科技服务订单》（以下简称“订单”）共同构成完整的《指点科技服务协议》。 在用户签订本标准协议前，用户已经阅读、理解并接受本标准条款及订单以及指点科技平台各类规则，并承诺遵守中国的各类法律规定，如用户不同意，请停止操作。</p>
+                <p>一、服务内容及申请</p>
+                <p>1、指点科技向用户提供的服务为：销售产品或服务。具体服务与消费形式以指点科技平台公布为准。</p>
+                <p>2、用户应根据指点科技、草根投资平台规则及相应流程完成用户信息提交、验证、实名认证等操作。通过指点科技审核且同意本标准协议后视为成功申请指点科技提供的相关服务。</p>
+                <p>3、指点科技委托草根投资进行代收本协议项下用户每期应付款项，用户应根据指点科技平台规则及相应流程和跳转页面完成在草根投资平台的注册，包括输入实名信息、绑定用户个人银行卡等步骤。用户在草根投资平台的账户作为用户接受本协议项下的商品和/或服务而支付合同金额的资金结算账户。用户同意授权指点科技委托草根投资对用户在草根投资平台的账户余额及其与草根投资平台绑定的银行卡进行定时分期划扣。</p>
+                <p>4、指点科技可根据法律法规和营销推广的实际情况对服务、消费形式及相关产品名称进行调整,具体调整内容以平台公告为准。</p>
+                <p>二、费用支付</p>
+                <p>1、付款费用 </p>
+                <p>（1）用户可选择一次性付款或分期付款等两种付款方式，分期付款指用户选择按照指点科技平台规则将产品货款按月支付。具体付款方式以指点科技平台提供的产品或服务页面所载明的平台规则为准。 </p>
+                <p>（2）用户在选择上述分期付款方式后，在满足一定的条件时，用户还可选择提前全部还款、提前部分还款等付款方式。具体付款服务类型及规则以指点科技平台实时公布的平台规则为准。</p>
+                <p>（3）服务费收取规则为：目前指点科技为用户提供免服务费的分期购物服务。如因政策等原因导致变化的，指点科技将提前以公告形式发布于平台上。</p>
+                <p>2、支付结算 </p>
+                <p>（1）用户对应偿还款项（包括但不限于产品货款、违约金（如有）等）进行付款结算时可在活动页面进行操作。</p>
+                <p>（2）用户与指点科技结算的依据是用户在草根投资平台个人账户系统的划扣记录以及银行对账凭证，后者没有记录而前者有记录的，以前者的系统记录为准；两者存在差异的，以银行对账凭证为准。 </p>
+                <p>（3）用户支付到期应偿还款项时，指点科技将按照违约金（如有）、产品货款的顺序进行冲抵。</p>
+                <p>
+                  三、授权委托安排
+                </p>
+                <p>1、用户授权指点科技或指点科技合作的第三方（以下简称“第三方”）通过征信机构查询采集用户的个人征信信息。</p>
+                <p>2、如指点科技为用户提供产品或服务的分期购买服务，则指点科技有权为获得的债权资产为标的进行债权转让。且用户签署本标准条款及订单即视为指点科技已履行债权转让的通知义务。 </p>
+                <p>3、用户授权指点科技以用户的名义履行下述事项：</p>
+                <p>（1）合理使用用户个人信息；</p>
+                <p>（2）自用户点击确认购买本协议项下的产品或服务之日起，指点科技即可委托草根投资为指点科技代收本协议项下用户每期应支付金额，通过定期划扣用户在草根投资平台上的账户余额及绑定的银行卡的方式以及授权草根投资代为用户与第三方支付公司可签订相关协议。用户确认对上述草根投资行为已充分知悉并理解，上述委托划扣行为均视为用户真实意思的表示，用户对其法律效力均予以认可且无任何异议，并自愿承受上述行为导致的法律后果。</p>
+                <p>4、上述委托期限为自本协议签署生效之日起至本标准条款及订单项下的义务全部履行完毕之日止。 在用户未履行完毕本标准条款及订义务之前，用户不得单方终止上述委托 。</p>
+                <p>四、权利和义务</p>
+                <p>1、指点科技权利与义务 </p>
+                <p>（1）如指点科技为用户提供销售产品或服务，指点科技保证用户购买的产品及服务符合法律法规规定的标准及行业标准，且能享受相应的售后服务。</p>
+                <p>（2）用户在未付清本协议项下所有应支付款项之前，指点科技保留本协议项下商品的所有权，用户享有该商品的使用权。</p>
+                <p>（3）指点科技有权在确有必要的情况下，自行或授权第三方通过合理的方式向用户或用户联系人告知本标准条款及订单相关情况。 </p>
+                <p>（4）指点科技可通过包括但不限于指点科技网站、相关APP、电子邮件、手机短信、微信公众号等向用户公示服务产品、重要提示、促销信息、服务协议、服务规则等信息。 </p>
+                <p>（5）指点科技对用户个人信息负有保密的义务，但正常履行本协议的义务需要或者国家法律、法规另有规定的除外。</p>
+                <p>2、草根投资权利和义务</p>
+                <p>（1）草根投资基于本协议项下用户的授权委托接收指点科技发出的划扣指令，依本协议及订单信息对用户在草根投资平台上的账户余额及其绑定的银行卡进行定期划扣，并将相应的代扣金额向指点科技指定的企业银行账户或第三方支付公司的开立账户进行转账付款。</p>
+                <p>（2）指点科技确保所提交至草根投资的用户账户划扣信息已经取得用户本人的有效授权，同意从其在草根投资的平台账户中扣收相关款项。否则，由此产生的一切纠纷和责任，由指点科技承担。草根投资对根据本协议的约定进行的代扣事项的一切后果和风险不承担任何责任。指点科技没有取得用户本人有效授权或有其他违约行为，导致草根投资承担任何责任或产生任何损失的，由草根投资将具体承担的责任和损失金额通知指点科技，除非指点科技能够提出确切的证据证明该损失不是由指点科技过错造成的，指点科技应向草根投资支付相应金额。</p>
+                <p>（3）草根投资仅对安全、准确、及时地执行指点科技发出的划扣指令承担义务；对于指点科技与用户之间因扣款金额、扣款时间、扣款周期、扣款业务用途以及本协议项下的产品销售和服务等产生的纠纷不承担任何责任。若发生用户对扣款产生疑义而引起的投诉或其他法律纠纷，指点科技应及时处理。同时，草根投资有权要求指点科技提供指点科技与用户的订单明细，指点科技应配合草根投资及时提供正确、真实、合法的相关文件。</p>
+                <p>3、用户权利和义务 </p>
+                <p>（1）用户有权知悉服务内容、使用方法、指点科技平台规则等。 </p>
+                <p>（2）用户应当向指点科技、草根投资提供真实、有效的资料。如身份信息变更、住址或工作地址变更及联系方式变更等应在变更后15日内通知指点科技和草根投资，包括但不限于草根投资平台资金结算账户相关资料修改、书面通知、在线或电话联系客服等。 </p>
+                <p>（3）用户应妥善保管用户账户、密码和/或数字证书。任何使用用户账户、密码和/或数字证书向指点科技和/或草根投资发出的指令，均视为用户操作且不可撤回或撤销。如用户发现有他人冒用、盗用或有其他可能危及到用户账户资金安全情形时，应立即通知指点科技和/或草根投资，向指点科技和/或草根投资申请暂停相关服务。非因指点科技/或草根投资的过错导致的任何损失由用户自行承担。 </p>
+                <p>（4）用户有权将本协议项下指点科技提供的产品和/或服务提供给第三人使用，但依然需如期足额支付当期应支付款项。当用户出现逾期情形，指点科技需要采取本协议项下的救济措施时，用户不得以不是实际使用人而拒绝付款。</p>
+                <p>五、知识产权</p>
+                <p>非经指点科技书面和草根投资同意，用户不得以包括但不限于使用、修改、复制、公开传播、篡改等在内的非法形式侵犯指点科技和草根投资的商标、专利、著作权及其他知识产权。</p>
+                <p>六、违约责任</p>
+                <p>1、三方均应严格履行本标准条款及订单项下义务，一方不履行其在本标准条款及订单项下义务或者履行本标准条款及订单项下义务不符合约定的，守约方有权要求违约方按照法律规定及本标准条款及订单的约定承担继续履行、采取补救措施、支付违约金或者赔偿损失等违约责任。 </p>
+                <p>2、违约方应承担守约方因违约方的违约行为而产生的全部费用和损失，包括但不限于调查费用、诉讼费、公告费、执行费、律师费等。</p>
+                <p>七、免责条款</p>
+                <p>1、指点科技与草根投资出现下列任一状况而无法正常运作，致使无法向用户提供本标准条款及订单项下的各项服务，指点科技和草根投资不承担任何违约或赔偿责任，该状况包括但不限于： </p>
+                <p>（1）在服务平台维护期间；</p>
+                <p>（2）电信设备出现故障不能进行数据传输的；</p>
+                <p>（3）因台风、地震、海啸、洪水、停电、战争、恐怖袭击等不可抗力之因素，造成系统障碍不能执行业务的； </p>
+                <p>（4）由于黑客攻击、电信部门和其他指点科技与草根投资有信息技术依赖的相关部门、企事业单位技术调整或故障、网站升级、银行方面的问题等原因而造成的服务中断或者延迟。 </p>
+                <p>2、本标准条款有效期内，因国家相关主管部门颁布、变更的法令、政策导致指点科技与草根投资不能提供约定服务的，不视为其违约，三方可根据相关的法令、政策变更条款内容或提前终止本标准条款。在此情况下，用户已经享受商品或服务而尚未完成分期付款的，可选择提前支付全部款项或与指点科技协商退货。</p>
+                <p>八、协议变更与解除</p>
+                <p>指点科技与草根投资有权根据需要修改本协议或根据本协议制定、修改各类具体规则并并及时以公告的方式通知用户，不再另行向会员做个别通知，用户有权选择继续或者停止使用本平台的服务。</p>
+                <p>九、使用法律及争议解决</p>
+                <p>1、本标准条款及订单的签订、履行、终止、解释和争议解决受中华人民共和国（“中国”）法律管辖。</p>
+                <p>2、因本标准条款及订单引发的或与本标准条款及订单有关的争议，由三方协商解决，也可由有关部门调解；协商或调解不成的，由指点科技所在地人民法院管辖。</p>
+                <p>十、其他</p>
+                <p>1、如果本标准条款任意条款规定根据任何法律或法规在任何方面被裁定为无效、不合法或不可强制执行，本标准条款其余规定不应在任何方面受到影响或损害。三方应通过诚意磋商，争取以法律许可以及三方期望的最大限度内有效的规定取代该等无效、不合法或不可强制执行的规定。 </p>
+                <p>2、对本标准条款及订单作出的任何修改和补充均应为书面形式。三方签署的与本标准条款及订单有关的修改协议和补充协议应是本标准条款及订单不可分割的组成部分，并应具有与本标准条款及订单同等的法律效力。 </p>
+                <p>3、如三方另行签订的协议与本标准条款及订单不一致的，以三方另行签订的协议约定为准。 </p>
+                <p>4、本标准条款及订单自用户勾选“同意”并点击“下一步”按钮（具体名称以指点科技平台显示为准）之日起签署，于指点科技和草根投资审核通过并加盖指点科技和草根投资电子章时生效，至三方在本标准条款及订单项下的全部义务履行完毕之日终止。除另有约定外，非经三方协商一致不得单方解除本标准条款及订单。</p>
+                <br>
+                <br>
+                <br>
+                <h3>指点科技服务订单</h3>
+                <p>甲方：杭州指点科技有限公司</p>
+                <p>乙方：浙江草根网络科技有限公司</p>
+                <p>丙方： 【 系统填充 】</p>
+                <p>身份证号码：【 系统填充 】</p>
+                <p>手机号码：【 系统填充 】</p>
+                <p>甲方（以下简称“指点科技”）是指点科技平台（包括但不限于域名为www.zhidiankeji.cn的网站、相关APP、企业微信公众号等）的运营公司。乙方（以下简称“草根投资”）拥有草根投资平台（包括但不限于域名为www.cgtz.com的网站及其手机客户端等）的所有权和运营权。丙方（以下简称“用户”）是购买本协议项下指点科技提供的商品和/或服务，并在草根投资平台注册以开立资金结算账户的完全民事行为能力人。三方通过《指点科技服务订单》（以下简称“订单”）约定指点科技和草根投资为用户提供商品和/或服务的具体内容及用户付款的详细信息。</p>
+                <p>本订单与《指点科技服务协议标准条款》（下称“标准条款”）共同构成完整的《指点科技服务协议》。</p>
+                <p>一、订单详情</p>
+                <p>根据用户申请，指点科技为用户提供产品/服务【Weker牌智能门锁】，用户按如下方式向指点科技支付费用共计【 系统填充 】元（大写：【 系统填充  】元）：</p>
+                <table border="1" width="100%"  cellspacing="0" cellpadding="0">
+                  <tr>
+                    <th style="width: 30%;">订单号</th>
+                    <td>【 系统填充 】</td>
+                  </tr>
+                  <tr>
+                    <th>用户姓名：</th>
+                    <td>【 系统填充 】</td>
+                  </tr>
+                  <tr>
+                    <th>身份证号：</th>
+                    <td>【 系统填充 】</td>
+                  </tr>
+                  <tr>
+                    <th>手机号：</th>
+                    <td>【 系统填充 】</td>
+                  </tr>
+                  <tr>
+                    <th>产品或服务名称：</th>
+                    <td>【 Weker牌智能锁】</td>
+                  </tr>
+                  <tr>
+                    <th>购买数量：</th>
+                    <td>【 系统填充 】</td>
+                  </tr>
+                  <tr>
+                    <th>购买日：</th>
+                    <td>【 系统填充 】 年 【 系统填充 】 月 【 系统填充 】 日</td>
+                  </tr>
+                  <tr>
+                    <th>首付款：</th>
+                    <td>【 系统填充 】元</td>
+                  </tr>
+                  <tr>
+                    <th>应付款项总额：</th>
+                    <td>【 系统填充 】元</td>
+                  </tr>
+                  <tr>
+                    <th>每期还款日：</th>
+                    <td>自首付款支付日之次月起至本订单应付款项总额付清之日（含）止期限内每月【系统填充】日（若当月没有该日，则每期还款日为当月最后一天，节假日不顺延）</td>
+                  </tr>
+                  <tr>
+                    <th>每期应付款：</th>
+                    <td>第一期支付【 系统填充 】元，之后每期支付【 系统填充 】元。</td>
+                  </tr>
+                </table>
+                <p>二、产品或服务内容</p>
+                <p>1、本订单及标准条款生效后合理时间内，由指点科技或指点科技合作的第三方向用户交付、安装产品。鉴于门锁安装的特殊性，为确保申请本产品的用户是具有长期固定住所的优质客户，避免引起不必要的纠纷，指点科技可在安装过程中有权请求查看房产证，租赁合同等一切合法文件，证明其对房产有合法的使用权。用户应在安装完成后当场检验产品质量及功能，确认无误后签字接收，即视为产品交付完成。 </p>
+                <p>2、指点科技承诺支持以下条件退货并退款</p>
+                <p>（1）自用户购买之日起一个月内为纯体验期，用户不满意，可无条件退货，只收取1元的费用；</p>
+                <p>（2）自首付款支付之日起至本订单应付款项总额付清之日止期限内，因产品质量问题，用户可无条件退货，并退还全部已支付金额，用户亦可要求免费换货。</p>
+                <p>（3）自首付款支付之日起6个月内，非产品质量问题，用户不满意可无条件退货，退还已支付金额的50%；自第7个月起至13个月内，非产品质量问题，用户不满意可无条件退货，退还已支付金额的30%；</p>
+                <p>3、售后保障：指点科技为用户提供3年质保(自安装之日起三年内质量问题免费上门维修），质保期间，如果因产品质量问题影响使用的，指点科技需负责对产品免费进行维修，如因用户人为因素损坏，维修费用由用户自行承担。</p>
+                <p>6、 经指点科技与用户协商终止本协议后，用户应按约定将产品完好无损的返还指点科技；若出现以下情况下，用户应按产品总价款向指点科技赔偿损失： </p>
+                <p>（1）将设备遗失或故意滞留不归还者；</p>
+                <p>（2）产品的功能受损、外观破损、资料遗失、配件不全，造成产品无法修复。 </p>
+                <p>7、草根投资按照本协议及本订单用户授权及指点科技的委托对用户的平台账户余额和绑定银行卡进行代收划扣。划扣时间为本订单第一条表格中载明的首付款支付日和/或每期还款日。草根投资会优先划扣平台账户余额，当用户平台账户余额不足以支付当期应付款金额时，则先扣除平台账户余额，不足部分从绑定银行卡划扣。若用户平台账户余额及绑定银行卡内余额总和不足以支付当期应付款金额，则第二日再次划扣。草根投资最多连续划扣3次，每自然日一次，若超过3次仍未能成功划扣足额当期应付款金额，则不再继续划扣，当期应还款确认逾期。</p>
+                <p>8、本订单支持用户一次性提前付清款项，用户可通过拨打客服电话400-150-5088，在指点科技工作人员指导下操作进行线下还款并通知草根网络终止划扣。</p>
+                <p>三、违约责任</p>
+                <p>用户应在本订单第一条所载明的每期还款日将分期款足额支付给指点科技，草根投资将受托指点科技代为定期划扣。当用户逾期支付后，甲方有权采取包括但不限于电话催收、外包上门催收、暂停智能门锁中有关指纹和密码解锁功能及收回密码所等救济措施，逾期超过7日的，指点科技有权收回产品，同时用户应向指点科技支付总价款30%的违约金。 </p>
+                <p>四、其他</p>
+                <p>1、除本订单另有规定外，其他未尽事宜以另行签订的《指点科技服务标准条款》及指点科技和草根投资平台规则为准。 </p>
+                <p>2、对本订单作出的任何修改和补充均应为书面形式。双方签署的与本订单有关的修改协议和补充协议应是本订单及标准条款不可分割的组成部分，并应具有与本订单及标准条款同等的法律效力。 </p>
+                <p> 3、本订单自用户勾选“同意”并点击“下一步”按钮（具体名称以指点科技平台显示为准）之日起签署，于指点科技和草根投资审核通过并加盖指点科技和草根投资电子章时生效，至三方在本标准条款及订单项下的全部义务履行完毕之日终止。除另有约定外，非经三方协商一致不得单方解除本标准条款及订单。</p>
+                <p>（以下无正文，指点科技、草根投资与用户已对本协议内容确认无误。此页为《指点科技服务协议》（包含《指点科技服务标准条款》及《指点科技服务订单》）的签署页。）</p>
+                <p>甲方：（签章）杭州指点科技有限公司 </p>
+                <p>【 系统填充 】 年 【 系统填充 】 月 【 系统填充 】 日 </p>
+                <p>乙方：（签章）浙江草根网络科技有限公司 </p>
+                <p>【 系统填充 】 年 【 系统填充 】 月 【 系统填充 】 日 </p>
+                <p>丙方：（签章） </p>
+                <p>【 系统填充 】 年 【 系统填充 】 月 【 系统填充 】 日</p>
+                <div class="protocal-button-group">
+                  <a href="#" style="padding: 0px 20px;" class="button close-popup">确认</a>
+                  <a href="#" style="margin-left: 20px;padding: 0px 20px;" class="button close-popup">关闭</a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form data-page="order" class="page cached order-form" novalidate>
+        <div class="page-content">
+          <div class="content-block zd-order-cBlock" style="height: 100%;">
+            <div class="content-block-inner"  style="height: 100%;">
+              <div class="list-block " style="margin-top: 0px;margin-bottom: 10px;">
+                <ul>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-name"></i></div>
+                      <div class="item-inner">
+                        <div class="item-title label">收货人</div>
+                        <div class="item-input">
+                          <input type="text" placeholder="姓名" data-validate="username" data-describedby="username-description">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-email"></i></div>
+                      <div class="item-inner">
+                        <div class="item-title label">手机号码</div>
+                        <div class="item-input">
+                          <input type="number" placeholder="收货人号码" data-validate="phone" data-describedby="phone-description">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-email"></i></div>
+                      <div class="item-inner">
+                        <div class="item-title label">收货地址</div>
+                        <div class="item-input">
+                          <input type="text" id='city-picker' placeholder="省/市/区" data-required="true" data-descriptions="city"/>
+                          <!--<input type="text" placeholder="省/市" id="picker-describe" required/>-->
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-email"></i></div>
+                      <div class="item-inner">
+                        <div class="item-title label">详细地址</div>
+                        <div class="item-input">
+                          <input type="text" placeholder="街道/门牌号" data-validate="street" data-describeby="street-description">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="list-block media-list zd-order-list"
+                   style="margin-top: 10px; margin-bottom: 10px;">
+                <ul>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-name"></i></div>
+                      <div class="item-inner">
+                        <div class="item-title label">商品信息</div>
+                        <div>
+                          <div style="margin-right: 10px;float: left;">
+                            <img src="img/product.png" alt="..." width="80px" height="80px">
+                          </div>
+                          <div class="info">
+                            <div>Weker智能锁</div>
+                            <div>数量: 2把 <span>周期: 13期</span></div>
+                            <div>¥300<span>/月</span></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="list-block" style="margin-top: 10px; margin-bottom: 10px;">
+                <ul>
+                  <li class="item-content">
+                    <!--<div class="item-media"><i class="icon icon-f7"></i></div>-->
+                    <div class="item-inner">
+                      <div class="item-title">支付方式</div>
+                      <div class="item-after">草根金融</div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+        <div class="toolbar">
+          <div class="toolbar-inner" style="padding: 0;">
+            <button type="submit"
+                   class="button zd-b-button skip-to-payment"
+                   style="width: 100%;height: 100%;">
+              去支付
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <form data-page="payment" class="page cached payment-form" novalidate>
+        <div class="page-content shop-payment payment-form">
+          <div class="content-block-title">持卡人</div>
+          <div class="list-block">
+            <ul>
+              <!-- Text inputs -->
+              <li>
+                <div class="item-content">
+                  <div class="item-media"><i class="icon icon-form-name"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title label">姓名</div>
+                    <div class="item-input">
+                      <input type="text" placeholder="请输入姓名" data-validate="username" data-describeby="username-description">
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="item-content">
+                  <div class="item-media"><i class="icon icon-form-email"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title label">身份证</div>
+                    <div class="item-input">
+                      <input type="text" placeholder="请输入真实有效的身份证号码" data-validate="idCard" data-describeby="idCard-description">
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <span class="tip">请填写本人真实信息，核实后不可更改</span>
+          <div class="content-block-title">银行卡</div>
+          <div class="list-block">
+            <ul>
+              <!-- Text inputs -->
+              <li>
+                <div class="item-content">
+                  <div class="item-media"><i class="icon icon-form-name"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title label">银行卡号</div>
+                    <div class="item-input">
+                      <input type="number" placeholder="请输入银行卡号" data-validate="bankCard" data-describeby="bankCard-description">
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="item-content">
+                  <div class="item-media"><i class="icon icon-form-email"></i></div>
+                  <div class="item-inner">
+                    <div class="item-title label">手机号</div>
+                    <div class="item-input">
+                      <input type="number" placeholder="请输入银行预留手机号" data-validate="phone" data-describeby="phone-description">
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="row">
+            <span>充值1元至您的账户以验证银行卡信息</span>
+          </div>
+        </div>
+        <div class="toolbar">
+          <div class="toolbar-inner" style="padding: 0;">
+            <button type="submit" class="button zd-b-button open-slider-modal" style="width: 100%;height: 100%;">
+              确定
+            </button>
+          </div>
+        </div>
+        <div class="popup popup-protocal">
+          <div class="content-block">
+            <h3>指点科技服务协议标准条款</h3>
+            <p>甲方：杭州指点科技有限公司</p>
+            <p>乙方：浙江草根网络科技有限公司</p>
+            <p>丙方：【 系统填充 】  </p>
+            <p>身份证号码：【 系统填充 】 </p>
+            <p>手机号码：【 系统填充 】 </p>
+            <p>甲方（以下简称“指点科技”）是指点科技平台（包括但不限于域名为www.zhidiankeji.cn的网站、相关APP、企业微信公众号等）的运营公司，为其客户提供先进的智能家居解决方案。乙方（以下简称“草根投资”）拥有草根投资平台（包括但不限于域名为www.cgtz.com的网站及其手机客户端等）的所有权和运营权，为其平台用户提供综合性金融信息服务。丙方（以下简称“用户”）是购买本协议项下指点科技提供的商品/服务，并在草根投资平台注册以开立资金结算账户的完全民事行为能力人。本协议是指点科技与用户之间就用户购买或使用指点科技所销售的商品或所提供的服务、用户授权指点科技委托草根投资进行分期划扣所订立的协议的标准条款。</p>
+            <p>本标准条款与《指点科技服务订单》（以下简称“订单”）共同构成完整的《指点科技服务协议》。 在用户签订本标准协议前，用户已经阅读、理解并接受本标准条款及订单以及指点科技平台各类规则，并承诺遵守中国的各类法律规定，如用户不同意，请停止操作。</p>
+            <p>一、服务内容及申请</p>
+            <p>1、指点科技向用户提供的服务为：销售产品或服务。具体服务与消费形式以指点科技平台公布为准。</p>
+            <p>2、用户应根据指点科技、草根投资平台规则及相应流程完成用户信息提交、验证、实名认证等操作。通过指点科技审核且同意本标准协议后视为成功申请指点科技提供的相关服务。</p>
+            <p>3、指点科技委托草根投资进行代收本协议项下用户每期应付款项，用户应根据指点科技平台规则及相应流程和跳转页面完成在草根投资平台的注册，包括输入实名信息、绑定用户个人银行卡等步骤。用户在草根投资平台的账户作为用户接受本协议项下的商品和/或服务而支付合同金额的资金结算账户。用户同意授权指点科技委托草根投资对用户在草根投资平台的账户余额及其与草根投资平台绑定的银行卡进行定时分期划扣。</p>
+            <p>4、指点科技可根据法律法规和营销推广的实际情况对服务、消费形式及相关产品名称进行调整,具体调整内容以平台公告为准。</p>
+            <p>二、费用支付</p>
+            <p>1、付款费用 </p>
+            <p>（1）用户可选择一次性付款或分期付款等两种付款方式，分期付款指用户选择按照指点科技平台规则将产品货款按月支付。具体付款方式以指点科技平台提供的产品或服务页面所载明的平台规则为准。 </p>
+            <p>（2）用户在选择上述分期付款方式后，在满足一定的条件时，用户还可选择提前全部还款、提前部分还款等付款方式。具体付款服务类型及规则以指点科技平台实时公布的平台规则为准。</p>
+            <p>（3）服务费收取规则为：目前指点科技为用户提供免服务费的分期购物服务。如因政策等原因导致变化的，指点科技将提前以公告形式发布于平台上。</p>
+            <p>2、支付结算 </p>
+            <p>（1）用户对应偿还款项（包括但不限于产品货款、违约金（如有）等）进行付款结算时可在活动页面进行操作。</p>
+            <p>（2）用户与指点科技结算的依据是用户在草根投资平台个人账户系统的划扣记录以及银行对账凭证，后者没有记录而前者有记录的，以前者的系统记录为准；两者存在差异的，以银行对账凭证为准。 </p>
+            <p>（3）用户支付到期应偿还款项时，指点科技将按照违约金（如有）、产品货款的顺序进行冲抵。</p>
+            <p>
+              三、授权委托安排
+            </p>
+            <p>1、用户授权指点科技或指点科技合作的第三方（以下简称“第三方”）通过征信机构查询采集用户的个人征信信息。</p>
+            <p>2、如指点科技为用户提供产品或服务的分期购买服务，则指点科技有权为获得的债权资产为标的进行债权转让。且用户签署本标准条款及订单即视为指点科技已履行债权转让的通知义务。 </p>
+            <p>3、用户授权指点科技以用户的名义履行下述事项：</p>
+            <p>（1）合理使用用户个人信息；</p>
+            <p>（2）自用户点击确认购买本协议项下的产品或服务之日起，指点科技即可委托草根投资为指点科技代收本协议项下用户每期应支付金额，通过定期划扣用户在草根投资平台上的账户余额及绑定的银行卡的方式以及授权草根投资代为用户与第三方支付公司可签订相关协议。用户确认对上述草根投资行为已充分知悉并理解，上述委托划扣行为均视为用户真实意思的表示，用户对其法律效力均予以认可且无任何异议，并自愿承受上述行为导致的法律后果。</p>
+            <p>4、上述委托期限为自本协议签署生效之日起至本标准条款及订单项下的义务全部履行完毕之日止。 在用户未履行完毕本标准条款及订义务之前，用户不得单方终止上述委托 。</p>
+            <p>四、权利和义务</p>
+            <p>1、指点科技权利与义务 </p>
+            <p>（1）如指点科技为用户提供销售产品或服务，指点科技保证用户购买的产品及服务符合法律法规规定的标准及行业标准，且能享受相应的售后服务。</p>
+            <p>（2）用户在未付清本协议项下所有应支付款项之前，指点科技保留本协议项下商品的所有权，用户享有该商品的使用权。</p>
+            <p>（3）指点科技有权在确有必要的情况下，自行或授权第三方通过合理的方式向用户或用户联系人告知本标准条款及订单相关情况。 </p>
+            <p>（4）指点科技可通过包括但不限于指点科技网站、相关APP、电子邮件、手机短信、微信公众号等向用户公示服务产品、重要提示、促销信息、服务协议、服务规则等信息。 </p>
+            <p>（5）指点科技对用户个人信息负有保密的义务，但正常履行本协议的义务需要或者国家法律、法规另有规定的除外。</p>
+            <p>2、草根投资权利和义务</p>
+            <p>（1）草根投资基于本协议项下用户的授权委托接收指点科技发出的划扣指令，依本协议及订单信息对用户在草根投资平台上的账户余额及其绑定的银行卡进行定期划扣，并将相应的代扣金额向指点科技指定的企业银行账户或第三方支付公司的开立账户进行转账付款。</p>
+            <p>（2）指点科技确保所提交至草根投资的用户账户划扣信息已经取得用户本人的有效授权，同意从其在草根投资的平台账户中扣收相关款项。否则，由此产生的一切纠纷和责任，由指点科技承担。草根投资对根据本协议的约定进行的代扣事项的一切后果和风险不承担任何责任。指点科技没有取得用户本人有效授权或有其他违约行为，导致草根投资承担任何责任或产生任何损失的，由草根投资将具体承担的责任和损失金额通知指点科技，除非指点科技能够提出确切的证据证明该损失不是由指点科技过错造成的，指点科技应向草根投资支付相应金额。</p>
+            <p>（3）草根投资仅对安全、准确、及时地执行指点科技发出的划扣指令承担义务；对于指点科技与用户之间因扣款金额、扣款时间、扣款周期、扣款业务用途以及本协议项下的产品销售和服务等产生的纠纷不承担任何责任。若发生用户对扣款产生疑义而引起的投诉或其他法律纠纷，指点科技应及时处理。同时，草根投资有权要求指点科技提供指点科技与用户的订单明细，指点科技应配合草根投资及时提供正确、真实、合法的相关文件。</p>
+            <p>3、用户权利和义务 </p>
+            <p>（1）用户有权知悉服务内容、使用方法、指点科技平台规则等。 </p>
+            <p>（2）用户应当向指点科技、草根投资提供真实、有效的资料。如身份信息变更、住址或工作地址变更及联系方式变更等应在变更后15日内通知指点科技和草根投资，包括但不限于草根投资平台资金结算账户相关资料修改、书面通知、在线或电话联系客服等。 </p>
+            <p>（3）用户应妥善保管用户账户、密码和/或数字证书。任何使用用户账户、密码和/或数字证书向指点科技和/或草根投资发出的指令，均视为用户操作且不可撤回或撤销。如用户发现有他人冒用、盗用或有其他可能危及到用户账户资金安全情形时，应立即通知指点科技和/或草根投资，向指点科技和/或草根投资申请暂停相关服务。非因指点科技/或草根投资的过错导致的任何损失由用户自行承担。 </p>
+            <p>（4）用户有权将本协议项下指点科技提供的产品和/或服务提供给第三人使用，但依然需如期足额支付当期应支付款项。当用户出现逾期情形，指点科技需要采取本协议项下的救济措施时，用户不得以不是实际使用人而拒绝付款。</p>
+            <p>五、知识产权</p>
+            <p>非经指点科技书面和草根投资同意，用户不得以包括但不限于使用、修改、复制、公开传播、篡改等在内的非法形式侵犯指点科技和草根投资的商标、专利、著作权及其他知识产权。</p>
+            <p>六、违约责任</p>
+            <p>1、三方均应严格履行本标准条款及订单项下义务，一方不履行其在本标准条款及订单项下义务或者履行本标准条款及订单项下义务不符合约定的，守约方有权要求违约方按照法律规定及本标准条款及订单的约定承担继续履行、采取补救措施、支付违约金或者赔偿损失等违约责任。 </p>
+            <p>2、违约方应承担守约方因违约方的违约行为而产生的全部费用和损失，包括但不限于调查费用、诉讼费、公告费、执行费、律师费等。</p>
+            <p>七、免责条款</p>
+            <p>1、指点科技与草根投资出现下列任一状况而无法正常运作，致使无法向用户提供本标准条款及订单项下的各项服务，指点科技和草根投资不承担任何违约或赔偿责任，该状况包括但不限于： </p>
+            <p>（1）在服务平台维护期间；</p>
+            <p>（2）电信设备出现故障不能进行数据传输的；</p>
+            <p>（3）因台风、地震、海啸、洪水、停电、战争、恐怖袭击等不可抗力之因素，造成系统障碍不能执行业务的； </p>
+            <p>（4）由于黑客攻击、电信部门和其他指点科技与草根投资有信息技术依赖的相关部门、企事业单位技术调整或故障、网站升级、银行方面的问题等原因而造成的服务中断或者延迟。 </p>
+            <p>2、本标准条款有效期内，因国家相关主管部门颁布、变更的法令、政策导致指点科技与草根投资不能提供约定服务的，不视为其违约，三方可根据相关的法令、政策变更条款内容或提前终止本标准条款。在此情况下，用户已经享受商品或服务而尚未完成分期付款的，可选择提前支付全部款项或与指点科技协商退货。</p>
+            <p>八、协议变更与解除</p>
+            <p>指点科技与草根投资有权根据需要修改本协议或根据本协议制定、修改各类具体规则并并及时以公告的方式通知用户，不再另行向会员做个别通知，用户有权选择继续或者停止使用本平台的服务。</p>
+            <p>九、使用法律及争议解决</p>
+            <p>1、本标准条款及订单的签订、履行、终止、解释和争议解决受中华人民共和国（“中国”）法律管辖。</p>
+            <p>2、因本标准条款及订单引发的或与本标准条款及订单有关的争议，由三方协商解决，也可由有关部门调解；协商或调解不成的，由指点科技所在地人民法院管辖。</p>
+            <p>十、其他</p>
+            <p>1、如果本标准条款任意条款规定根据任何法律或法规在任何方面被裁定为无效、不合法或不可强制执行，本标准条款其余规定不应在任何方面受到影响或损害。三方应通过诚意磋商，争取以法律许可以及三方期望的最大限度内有效的规定取代该等无效、不合法或不可强制执行的规定。 </p>
+            <p>2、对本标准条款及订单作出的任何修改和补充均应为书面形式。三方签署的与本标准条款及订单有关的修改协议和补充协议应是本标准条款及订单不可分割的组成部分，并应具有与本标准条款及订单同等的法律效力。 </p>
+            <p>3、如三方另行签订的协议与本标准条款及订单不一致的，以三方另行签订的协议约定为准。 </p>
+            <p>4、本标准条款及订单自用户勾选“同意”并点击“下一步”按钮（具体名称以指点科技平台显示为准）之日起签署，于指点科技和草根投资审核通过并加盖指点科技和草根投资电子章时生效，至三方在本标准条款及订单项下的全部义务履行完毕之日终止。除另有约定外，非经三方协商一致不得单方解除本标准条款及订单。</p>
+            <br>
+            <br>
+            <br>
+            <h3>指点科技服务订单</h3>
+            <p>甲方：杭州指点科技有限公司</p>
+            <p>乙方：浙江草根网络科技有限公司</p>
+            <p>丙方： 【 系统填充 】</p>
+            <p>身份证号码：【 系统填充 】</p>
+            <p>手机号码：【 系统填充 】</p>
+            <p>甲方（以下简称“指点科技”）是指点科技平台（包括但不限于域名为www.zhidiankeji.cn的网站、相关APP、企业微信公众号等）的运营公司。乙方（以下简称“草根投资”）拥有草根投资平台（包括但不限于域名为www.cgtz.com的网站及其手机客户端等）的所有权和运营权。丙方（以下简称“用户”）是购买本协议项下指点科技提供的商品和/或服务，并在草根投资平台注册以开立资金结算账户的完全民事行为能力人。三方通过《指点科技服务订单》（以下简称“订单”）约定指点科技和草根投资为用户提供商品和/或服务的具体内容及用户付款的详细信息。</p>
+            <p>本订单与《指点科技服务协议标准条款》（下称“标准条款”）共同构成完整的《指点科技服务协议》。</p>
+            <p>一、订单详情</p>
+            <p>根据用户申请，指点科技为用户提供产品/服务【Weker牌智能门锁】，用户按如下方式向指点科技支付费用共计【 系统填充 】元（大写：【 系统填充  】元）：</p>
+            <table border="1" width="100%"  cellspacing="0" cellpadding="0">
+              <tr>
+                <th style="width: 30%;">订单号</th>
+                <td>【 系统填充 】</td>
+              </tr>
+              <tr>
+                <th>用户姓名：</th>
+                <td>【 系统填充 】</td>
+              </tr>
+              <tr>
+                <th>身份证号：</th>
+                <td>【 系统填充 】</td>
+              </tr>
+              <tr>
+                <th>手机号：</th>
+                <td>【 系统填充 】</td>
+              </tr>
+              <tr>
+                <th>产品或服务名称：</th>
+                <td>【 Weker牌智能锁】</td>
+              </tr>
+              <tr>
+                <th>购买数量：</th>
+                <td>【 系统填充 】</td>
+              </tr>
+              <tr>
+                <th>购买日：</th>
+                <td>【 系统填充 】 年 【 系统填充 】 月 【 系统填充 】 日</td>
+              </tr>
+              <tr>
+                <th>首付款：</th>
+                <td>【 系统填充 】元</td>
+              </tr>
+              <tr>
+                <th>应付款项总额：</th>
+                <td>【 系统填充 】元</td>
+              </tr>
+              <tr>
+                <th>每期还款日：</th>
+                <td>自首付款支付日之次月起至本订单应付款项总额付清之日（含）止期限内每月【系统填充】日（若当月没有该日，则每期还款日为当月最后一天，节假日不顺延）</td>
+              </tr>
+              <tr>
+                <th>每期应付款：</th>
+                <td>第一期支付【 系统填充 】元，之后每期支付【 系统填充 】元。</td>
+              </tr>
+            </table>
+            <p>二、产品或服务内容</p>
+            <p>1、本订单及标准条款生效后合理时间内，由指点科技或指点科技合作的第三方向用户交付、安装产品。鉴于门锁安装的特殊性，为确保申请本产品的用户是具有长期固定住所的优质客户，避免引起不必要的纠纷，指点科技可在安装过程中有权请求查看房产证，租赁合同等一切合法文件，证明其对房产有合法的使用权。用户应在安装完成后当场检验产品质量及功能，确认无误后签字接收，即视为产品交付完成。 </p>
+            <p>2、指点科技承诺支持以下条件退货并退款</p>
+            <p>（1）自用户购买之日起一个月内为纯体验期，用户不满意，可无条件退货，只收取1元的费用；</p>
+            <p>（2）自首付款支付之日起至本订单应付款项总额付清之日止期限内，因产品质量问题，用户可无条件退货，并退还全部已支付金额，用户亦可要求免费换货。</p>
+            <p>（3）自首付款支付之日起6个月内，非产品质量问题，用户不满意可无条件退货，退还已支付金额的50%；自第7个月起至13个月内，非产品质量问题，用户不满意可无条件退货，退还已支付金额的30%；</p>
+            <p>3、售后保障：指点科技为用户提供3年质保(自安装之日起三年内质量问题免费上门维修），质保期间，如果因产品质量问题影响使用的，指点科技需负责对产品免费进行维修，如因用户人为因素损坏，维修费用由用户自行承担。</p>
+            <p>6、 经指点科技与用户协商终止本协议后，用户应按约定将产品完好无损的返还指点科技；若出现以下情况下，用户应按产品总价款向指点科技赔偿损失： </p>
+            <p>（1）将设备遗失或故意滞留不归还者；</p>
+            <p>（2）产品的功能受损、外观破损、资料遗失、配件不全，造成产品无法修复。 </p>
+            <p>7、草根投资按照本协议及本订单用户授权及指点科技的委托对用户的平台账户余额和绑定银行卡进行代收划扣。划扣时间为本订单第一条表格中载明的首付款支付日和/或每期还款日。草根投资会优先划扣平台账户余额，当用户平台账户余额不足以支付当期应付款金额时，则先扣除平台账户余额，不足部分从绑定银行卡划扣。若用户平台账户余额及绑定银行卡内余额总和不足以支付当期应付款金额，则第二日再次划扣。草根投资最多连续划扣3次，每自然日一次，若超过3次仍未能成功划扣足额当期应付款金额，则不再继续划扣，当期应还款确认逾期。</p>
+            <p>8、本订单支持用户一次性提前付清款项，用户可通过拨打客服电话400-150-5088，在指点科技工作人员指导下操作进行线下还款并通知草根网络终止划扣。</p>
+            <p>三、违约责任</p>
+            <p>用户应在本订单第一条所载明的每期还款日将分期款足额支付给指点科技，草根投资将受托指点科技代为定期划扣。当用户逾期支付后，甲方有权采取包括但不限于电话催收、外包上门催收、暂停智能门锁中有关指纹和密码解锁功能及收回密码所等救济措施，逾期超过7日的，指点科技有权收回产品，同时用户应向指点科技支付总价款30%的违约金。 </p>
+            <p>四、其他</p>
+            <p>1、除本订单另有规定外，其他未尽事宜以另行签订的《指点科技服务标准条款》及指点科技和草根投资平台规则为准。 </p>
+            <p>2、对本订单作出的任何修改和补充均应为书面形式。双方签署的与本订单有关的修改协议和补充协议应是本订单及标准条款不可分割的组成部分，并应具有与本订单及标准条款同等的法律效力。 </p>
+            <p> 3、本订单自用户勾选“同意”并点击“下一步”按钮（具体名称以指点科技平台显示为准）之日起签署，于指点科技和草根投资审核通过并加盖指点科技和草根投资电子章时生效，至三方在本标准条款及订单项下的全部义务履行完毕之日终止。除另有约定外，非经三方协商一致不得单方解除本标准条款及订单。</p>
+            <p>（以下无正文，指点科技、草根投资与用户已对本协议内容确认无误。此页为《指点科技服务协议》（包含《指点科技服务标准条款》及《指点科技服务订单》）的签署页。）</p>
+            <p>甲方：（签章）杭州指点科技有限公司 </p>
+            <p>【 系统填充 】 年 【 系统填充 】 月 【 系统填充 】 日 </p>
+            <p>乙方：（签章）浙江草根网络科技有限公司 </p>
+            <p>【 系统填充 】 年 【 系统填充 】 月 【 系统填充 】 日 </p>
+            <p>丙方：（签章） </p>
+            <p>【 系统填充 】 年 【 系统填充 】 月 【 系统填充 】 日</p>
+            <p><a href="../../dist/pages/shop/success.html" class="button close-popup">确认并关闭协议</a></p>
+          </div>
+        </div>
+      </form>
+
+      <form data-page="appoint" class="page cached appoint-form" novalidate>
+        <div class="page-content">
+          <div class="content-block zd-order-cBlock" style="height: 100%;">
+            <div class="content-block-inner"  style="height: 100%;">
+              <div class="list-block appoint-form" style="margin-top: 0px;margin-bottom: 10px;">
+                <ul>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-name"></i></div>
+                      <div class="item-inner">
+                        <div class="item-title label">收货人</div>
+                        <div class="item-input">
+                          <input type="text"
+                                 placeholder="姓名"
+                                 data-validate="username"
+                                 data-describeby="username-description">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-email"></i></div>
+                      <div class="item-inner">
+                        <div class="item-title label">手机号码</div>
+                        <div class="item-input">
+                          <input type="text"
+                                 placeholder="收货人号码"
+                                 data-validate="phone"
+                                 data-describedby="phone-description">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-email"></i></div>
+                      <div class="item-inner">
+                        <div class="item-title label">收货地址</div>
+                        <div class="item-input">
+                          <input type="text"
+                                 id='city-picker-appoint'
+                                 placeholder="省/市/区"
+                                 data-required="true"
+                                 data-descriptions="city"/>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-email"></i></div>
+                      <div class="item-inner">
+                        <div class="item-title label">详细地址</div>
+                        <div class="item-input">
+                          <input type="text"
+                                 placeholder="区县/街道/门牌号"
+                                 data-validate="street"
+                                 data-describeby="street-description">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="bottom">
+                <button type="submit" style="width: 100%;" class="button zd-b-button appoint-button">立即预约</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <div data-page="login" class="page cached">
+        <div class="page-content login-screen-content">
+          <div class="login-screen-title">
+            <img src="img/logo1.png" alt="..." width="35%" height="35%">
+          </div>
+          <form class="login-form" novalidate>
+            <div class="list-block">
+              <ul>
+                <li class="item-content">
+                  <div class="item-inner">
+                    <div class="item-title label">用户名</div>
+                    <div class="item-input">
+                      <input type="text" name="username" placeholder="请输入用户名" style="text-align: left;">
+                    </div>
+                  </div>
+                </li>
+                <li class="item-content">
+                  <div class="item-inner">
+                    <div class="item-title label">密码</div>
+                    <div class="item-input">
+                      <input type="password" name="password" placeholder="请输入密码" style="text-align: left;">
+                    </div>
+                  </div>
+                </li>
+                <li class="item-content" style="display: block;">
+                  <a href="#forgot" class="forgot-pwd">忘记密码</a>
+                </li>
+              </ul>
+            </div>
+            <div class="list-block">
+              <ul>
+                <li style="margin-bottom: 20px"><a href="#" class="button login-button login-submit">立即登录</a></li>
+                <li><a href="#reg" class=" button reg-button">免费注册</a></li>
+              </ul>
+            </div>
+          </form>
+          <div class="login-screen-title">
+            <img src="img/logo2.png" alt="..." width="35%" height="35%">
+          </div>
+        </div>
+      </div>
+
+      <form data-page="forgot" class="page cached forgot-form" novalidate>
+        <!-- Scrollable page content-->
+        <div class="page-content">
+          <div class="list-block">
+            <ul>
+              <li>
+                <div class="item-content">
+                  <div class="item-inner">
+                    <div class="item-input">
+                      <input type="text" placeholder="请填写手机号码" style="text-align: left" data-validate="phone" data-describedby="phone-description"/>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="item-content">
+                  <div class="item-inner">
+                    <div class="item-input">
+                      <input type="text" placeholder="图形验证码" style="text-align: left" data-required="true" data-descriptions="picValid"/>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="item-content">
+                  <div class="item-inner">
+                    <div class="item-input" style="position: relative;">
+                      <input type="text" placeholder="短信验证码" style="text-align: left" data-required="true" data-descriptions="messageValid"/>
+                      <a href="javascript:;" class="idCode">发送验证码</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="item-content">
+                  <div class="item-inner">
+                    <div class="item-input">
+                      <input type="password" id="pwdFgt" placeholder="请输入密码" style="text-align: left" data-required="true" data-descriptions="password"/>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="item-content">
+                  <div class="item-inner">
+                    <!--<div class="item-title label">重复密码</div>-->
+                    <div class="item-input">
+                      <input type="password" id="pwdConfirmFgt" placeholder="请再一次输入密码" style="text-align: left" data-required="true" data-descriptions="confirmpassword" data-conditional="confirmpwd"/>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-block">
+            <div class="row">
+              <div class="col-50" style="margin-left: 25%;">
+                <input type="submit" value="确认修改" class="button login-button forgot"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <form data-page="reg" class="page cached reg-form" novalidate>
+        <!-- Scrollable page content-->
+        <div class="page-content">
+          <div class="list-block">
+            <ul>
+              <li>
+                <div class="item-content">
+                  <div class="item-inner">
+                    <div class="item-input">
+                      <input type="text" placeholder="手机号码" style="text-align: left" data-validate="phone" data-describedby="phone-description"/>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="item-content">
+                  <div class="item-inner">
+                    <div class="item-input">
+                      <input type="text" placeholder="请输入图形验证码" style="text-align: left" data-required="true" data-descriptions="picValid"/>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="item-content">
+                  <div class="item-inner">
+                    <div class="item-input" style="position: relative;">
+                      <input type="text" placeholder="请输入短信验证码" style="text-align: left" data-required="true" data-descriptions="messageValid"/>
+                      <a href="javascript:;" class="idCode">发送验证码</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="item-content">
+                  <div class="item-inner">
+                    <div class="item-input">
+                      <input type="password" id="pwdReg" placeholder="请输入密码" style="text-align: left" data-required="true" data-descriptions="password"/>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="item-content">
+                  <div class="item-inner">
+                    <div class="item-input">
+                      <input type="password" id="pwdConfirmReg" placeholder="请再一次输入密码" style="text-align: left" data-required="true" data-descriptions="confirmpassword" data-conditional="confirmpwd"/>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="content-block">
+            <div class="row">
+              <div class="col-50" style="margin-left: 25%;">
+                <input type="submit" value="完成注册" class="button login-button reg" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="js/my-app.js"></script>
+</body>
+</html>

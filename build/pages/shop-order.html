@@ -1,0 +1,82 @@
+<style>
+  .shop-order{
+    height: 100%;
+    background: #eee;
+    padding-top: 10px;
+  }
+  .shop-order .weui-cells{
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  .shop-order .weui-cells .row{
+    display: flex;
+  }
+  .weui-cell .title{
+    margin-bottom: 8px;
+  }
+  .row img{
+    -webkit-border-radius:6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    width: 80px;
+    height: 80px;
+  }
+</style>
+<div class="shop-order">
+  <div class="weui-cells weui-cells_form">
+    <div class="weui-cell">
+      <div class="weui-cell__hd"><label class="weui-label">预约人</label></div>
+      <div class="weui-cell__bd">
+        <input class="weui-input" type="number" placeholder="姓名">
+      </div>
+    </div>
+    <div class="weui-cell">
+      <div class="weui-cell__hd"><label class="weui-label">手机号码</label></div>
+      <div class="weui-cell__bd">
+        <input class="weui-input" type="number" placeholder="收货人号码">
+      </div>
+    </div>
+    <div class="weui-cell">
+      <div class="weui-cell__hd"><label class="weui-label">安装地址</label></div>
+      <div class="weui-cell__bd">
+        <input class="weui-input" type="number" placeholder="省/市/区">
+      </div>
+    </div>
+    <div class="weui-cell">
+      <div class="weui-cell__hd"><label class="weui-label">详细地址</label></div>
+      <div class="weui-cell__bd">
+        <input class="weui-input" type="number" placeholder="街道/门牌号">
+      </div>
+    </div>
+  </div>
+
+  <div class="weui-cells" style="margin-top: 0">
+    <div class="weui-cell" style="flex-direction: column;align-items: flex-start">
+      <div class="title">商品信息</div>
+      <div class="row">
+        <div style="margin-right: 10px">
+          <img src="images/swiper-1.jpg" alt="..." width="80px" height="80px">
+        </div>
+        <div class="info">
+          <div>我是智能锁啊啊</div>
+          <div>数量: 2把</div>
+          <div>¥300/每月</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="weui-cells">
+    <div class="weui-cell">
+      <div class="weui-cell__bd">
+        <p>支付方式</p>
+      </div>
+      <div class="weui-cell__ft">草根金融</div>
+    </div>
+  </div>
+</div>
+
+<div class="bottom">
+  <a href="#payment" class="weui-btn weui-btn_blue">去支付</a>
+</div>
+
